@@ -78,4 +78,12 @@ $(function () {
     );
   });
 
+  $(".add-name").on("click", function (event) {
+    var nameElemId = `burger${this.id}`;
+    var nameElem = $("#" + nameElemId);
+    console.log(nameElem);
+    console.log(`$(#${nameElemId})`);
+    $("#" + nameElemId).removeClass("hidden");
+  });
+
 });

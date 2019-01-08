@@ -46,7 +46,12 @@ input[type="text"] {
     border: none;
     padding: 5px;
 }
-	
+.hidden{
+    display:none;
+}
+.unhidden{
+    display:block;
+}
 #add-burger {
     padding-left: 15px;
     padding-right: 15px;

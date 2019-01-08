@@ -22,8 +22,8 @@
                 {{#each burgers}}
                 {{#unless this.devoured}}
                 <li class="list-group-item">
-                    <h3>{{this.burger_name}}  <button type="button" class="add-name" id="devour{{this.id}}">For ?</button>
-					<input type="text" name="customer" class="customer" id="customer{{this.id}}" placeholder="Customer name"></h3>
+                    <h3>{{this.burger_name}}  <button type="button" class="add-name" id="{{this.id}}">For ?</button>
+					<input type="text" name="customer" class="customer hidden" id="burger{{this.id}}" placeholder="Customer name"></h3>
 
                     <button id="devour-burger" class="change-eaten" data-id="{{id}}" data-neweaten="{{devoured}}">
                         DEVOUR IT!
