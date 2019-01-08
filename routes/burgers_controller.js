@@ -15,7 +15,9 @@ module.exports = function (app) {
     console.log("get(/...");
     // Add sequelize code to find all posts, and return them to the user with res.json
     // findAll returns all entries for a table when used with no options
-    db.Burger.findAll({}).then(function (results) {
+    db.Burger.findAll({
+      order: [['burger_name', 'ASC']]
+    }).then(function (results) {
       // We have access to the posts as an argument inside of the callback function
       //console.log(results);
       var burgersObj = {
