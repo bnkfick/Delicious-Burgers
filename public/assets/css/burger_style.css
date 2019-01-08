@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    background: url("/assets/images/chalkboard.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #58535C;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+#burger-img {
+    width: 100px;
+}
+
+h1 {
+    margin-top:100px;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 50px;
+    color: white;
+}
+
+h2 {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 28px;
+    font-weight: 700;
+    color: 	#BDB16C;
+    color: #E7CD94;
+    margin: 5px auto;
+}
+
+h3 {
+    color: #948077;
+}
+input[type="text"] {
+    margin-top: 20px;
+    width: 250px;
+    border-radius: 2px;
+    border: none;
+    padding: 5px;
+}
+	
+#add-burger {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    border: none;
+    text-transform: uppercase;
+    font-family: 'Fredericka the Great', cursive;
+    /* background-color: #EEAEAF; */
+    background-color: 	#86C2B4;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+button { 
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid #948077;
+}
+button:hover {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#devour-burger {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    border: none;
+    text-transform: uppercase;
+    font-family: 'Fredericka the Great', cursive;
+    /* background-color: #A2C6C6; */
+    background-color:	#7A9AB1;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+#order-burger {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    border: none;
+    text-transform: uppercase;
+    font-family: 'Fredericka the Great', cursive;
+    background-color: #A54A53;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+#cancel-burger {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+
+    border-color: #ddd;
+    border-color: #A2C6C6;
+    text-transform: uppercase;
+    font-family: 'Fredericka the Great', cursive;
+    /* background-color:	#C4D758; */
+    color: #948077;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.list-group-item {
+    background-color: #F3F4EE;
+}
+/* borders */
+#top,
+#bottom,
+#left,
+#right {
+  background-color:	#A2C6C6;
+  position: fixed;
+}
+
+#left,
+#right {
+  top: 0;
+  bottom: 0;
+  width: 10px;
+}
+
+#left {
+  left: 0;
+}
+
+#right {
+  right: 0;
+}
+
+#top,
+#bottom {
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+
+#top {
+  top: 0;
+}
+
+#bottom {
+  bottom: 0;
+}
