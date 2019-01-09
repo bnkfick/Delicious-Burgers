@@ -6,7 +6,7 @@
         <img id="burger-img" src="/assets/images/burger.png">
         <form class="create-update-form" action="/" method="POST">
             <div class="form-group">
-                <input type="text" class="chalk-border" id="new-burger" name="burger_name">
+                <input type="text" id="new-burger" name="burger_name">
                 <input type="submit" id="add-burger" value="Place Order">
             </div>
         </form>
@@ -20,10 +20,25 @@
 
             <ul class="list-group">
                 {{#each burgers}}
+
+                {{!-- Don't understand why this.burger_name has a value, but 
+                this.Burger.dataValues.burger_name doesn't
+                while this.Customer.dataValues.customer_name has a value, but
+                this.customer_name doesn't give me a value 
+
+                this.burger_name {{this.burger_name}} works<br>
+                this.customer_name {{this.customer_name}} doesn't work<br>
+                this.dataValues.burger_name {{this.dataValues.burger_name}} works<br>
+                this.dataValues.customer_name {{this.dataValues.customer_name}} doesn't work  <br>
+                this.Burger.dataValues.burger_name {{this.Burger.dataValues.burger_name}} doesn't work
+                this.Customer.dataValues.customer_name {{this.Customer.dataValues.customer_name}}  works
+                --}}
                 {{#unless this.devoured}}
                 <li class="list-group-item">
-                    <h3>{{this.burger_name}}  <button type="button" class="add-name" id="{{this.id}}">For ?</button>
-					<input type="text" name="customer" class="customer hidden" id="burger{{this.id}}" placeholder="Customer name"></h3>
+                    <h3>{{this.burger_name}} &mdash; for 
+                        
+                        <span class="customer" data-burgerid="burger{{this.id}}" data-customerid="customer{{this.Customer.dataValues.id}}">{{this.Customer.dataValues.customer_name}}</span>
+                        <input type="text" name="customer" class="edit-customer" id="burger{{this.id}}" data-customerid="{{this.Customer.dataValues.id}}" value="{{this.Customer.dataValues.customer_name}}"></h3>
 
                     <button id="devour-burger" class="change-eaten" data-id="{{id}}" data-neweaten="{{devoured}}">
                         DEVOUR IT!
@@ -32,7 +47,7 @@
                     <button id="cancel-burger" class="cancel" data-id="{{id}}">
                         CANCEL IT!
                     </button>
-                   
+
                 </li>
                 {{/unless}}
                 {{/each}}
@@ -46,14 +61,14 @@
                 {{#each burgers}}
                 {{#if this.devoured}}
                 <li class="list-group-item">
-                    <h3>{{this.burger_name}}</h3>
-                        
+                    <h3>{{this.burger_name}} &mdash; for {{this.Customer.dataValues.customer_name}}</h3>
+
                     <button id="order-burger" class="change-eaten" data-id="{{id}}" data-neweaten="{{devoured}}">
                         ORDER IT AGAIN!
                     </button>
 
                     <button id="cancel-burger" class="cancel" data-id="{{id}}">
-                        No thanks.  Drop this burger.
+                        No thanks. Drop this burger.
                     </button>
                 </li>
                 {{/if}}

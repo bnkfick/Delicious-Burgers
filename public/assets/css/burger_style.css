@@ -39,19 +39,25 @@ h2 {
 h3 {
     color: #948077;
 }
-input[type="text"] {
-    margin-top: 20px;
+
+#new-burger {
     width: 250px;
     border-radius: 2px;
     border: none;
     padding: 5px;
 }
-.hidden{
+#new-burger {
+    margin-top: 20px;
+}
+
+.edit-customer {
     display:none;
+    margin-top: 0;
+    padding: 5px;
+    font-size: 20px;
+
 }
-.unhidden{
-    display:block;
-}
+
 #add-burger {
     padding-left: 15px;
     padding-right: 15px;
