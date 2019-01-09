@@ -102,6 +102,7 @@ $(function () {
   // This function starts updating a customer name in the database if a user hits the "Enter Key"
   // While in edit mode
   function finishEdit(event) {
+    console.log(event.which);
     var customerId = $(this).data("customerid");
     var customerName = $(this).val();
     var burgerId = $(this).attr("id");
