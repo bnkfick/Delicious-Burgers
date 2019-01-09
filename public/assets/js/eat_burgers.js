@@ -118,15 +118,15 @@ $(function () {
       customerid: customerid
     };
 
-    //console.log(newName.customername);
-    //console.log(newName.customerid);
+    console.log(newName.customername);
+    console.log(newName.customerid);
 
     $.ajax("/api/customer/", {
       type: "PUT",
       data: newName
     }).then(
       function () {
-        //console.log("changed customer name", newName);
+        console.log("changed customer name", newName);
         var burgerCustEdit = document.getElementById(burgerid);
         $(burgerCustEdit).hide();
         $(burgerCustEdit).siblings("span.customer").text(newName.customername).show();
