@@ -19,11 +19,6 @@ module.exports = function (app) {
       include: [db.Customer],
       order: [['burger_name', 'ASC']]
     }).then(function (results) {
-      // We have access to the posts as an argument inside of the callback function
-      //console.log(results);
-      /*       var burgersObj = {
-              burgers: results
-            }; */
       res.render("index", { burgers: results });
     });
   });
@@ -81,7 +76,7 @@ module.exports = function (app) {
     db.Customer.update({ 
       customer_name: req.body.customername 
     }, 
-      { where: { id: req.body.customerid } }
+    { where: { id: req.body.customerid } }
     ).then(function (result) {
       if (result.changedRows == 0) {
         return res.status(404).end();

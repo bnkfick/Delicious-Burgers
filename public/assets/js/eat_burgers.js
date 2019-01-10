@@ -102,7 +102,6 @@ $(function () {
   // This function starts updating a customer name in the database if a user hits the "Enter Key"
   // While in edit mode
   function finishEdit(event) {
-    console.log(event.which);
     var customerId = $(this).data("customerid");
     var customerName = $(this).val();
     var burgerId = $(this).attr("id");
@@ -119,8 +118,8 @@ $(function () {
       customerid: customerid
     };
 
-    console.log(newName.customername);
-    console.log(newName.customerid);
+    //console.log(newName.customername);
+    //console.log(newName.customerid);
 
     $.ajax("/api/customer/", {
       type: "PUT",
@@ -130,7 +129,8 @@ $(function () {
         console.log("changed customer name", newName);
         var burgerCustEdit = document.getElementById(burgerid);
         $(burgerCustEdit).hide();
-        $(burgerCustEdit).siblings("span.customer").text(newName.customername).show();
+        $(burgerCustEdit).siblings("span.customer").text(newName.customername);
+        $(burgerCustEdit).siblings("span.customer").show();
       }
     );
   }

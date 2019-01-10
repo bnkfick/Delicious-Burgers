@@ -16,7 +16,7 @@
     <div class="row">
 
         <div class="col-lg-6">
-            <h2>Order List</h2>
+            {{#if burgers}}<h2>Order List</h2>{{/if}}
 
             <ul class="list-group">
                 {{#each burgers}}
@@ -33,6 +33,7 @@
                 this.Burger.dataValues.burger_name {{this.Burger.dataValues.burger_name}} doesn't work
                 this.Customer.dataValues.customer_name {{this.Customer.dataValues.customer_name}}  works
                 --}}
+
                 {{#unless this.devoured}}
                 <li class="list-group-item">
                     <h3>{{this.burger_name}} &mdash; for 
@@ -41,7 +42,7 @@
                         <input type="text" name="customer" class="edit-customer" id="burger{{this.id}}" data-customerid="{{this.Customer.dataValues.id}}" value="{{this.Customer.dataValues.customer_name}}"></h3>
 
                     <button id="devour-burger" class="change-eaten" data-id="{{id}}" data-neweaten="{{devoured}}">
-                        DEVOUR IT!
+                        DELIVER IT!
                     </button>
 
                     <button id="cancel-burger" class="cancel" data-id="{{id}}">
@@ -55,7 +56,7 @@
         </div>
 
         <div class="col-lg-6">
-            <h2>Fulfilled</h2>
+            {{#if burgers}}<h2>Delivered</h2>{{/if}}
 
             <ul class="list-group">
                 {{#each burgers}}
